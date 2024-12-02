@@ -1,0 +1,1 @@
+gawk '{left[NR]=$1; right[NR]=$2} END {asort(left); asort(right); sum=0; for (i=1; i<=NR; i++) sum+=left[i] > right[i] ? left[i]-right[i] : right[i]-left[i]; print "Diff sum:", sum}' input
