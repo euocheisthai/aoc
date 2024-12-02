@@ -1,0 +1,1 @@
+gawk '{left[NR] = $1; count[$2]++}; END {ss = 0; for (i = 1; i <= NR; i++) {ss += left[i] * count[left[i]]}; printf("score: %s\n"), ss}' input
